@@ -2,6 +2,13 @@
 Author: Template Stock
 Author URL: http://templatestock.co
 --*/
+:root{
+    --purple:#814096;
+    --pink:#F83292;
+	--orange : #ffa341;
+    --gradient:linear-gradient(225deg, var(--purple), var(--pink),var(--orange));
+}
+
 body a{
     transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -21,6 +28,9 @@ h1,h2,h3,h4,h5,h6{
 	padding:0 0;
 	margin:0 0;
 }
+.text-white{
+	color:#fff !important;
+}
 p{
 	padding:0 0;
 	margin:0 0;
@@ -37,7 +47,7 @@ body{
 	
 }
 .header{
-	background: url("../images/banner.jpg") no-repeat center top;
+	background: url("../images/home-bg-img.png") no-repeat center top;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -62,18 +72,18 @@ body{
 }
 .top-menu ul li a{
 	font-size: 1.1em;
-	color: #fff;
+	color: #fff);
 	text-decoration: none;
 	text-transform: uppercase;
 	
 }
 .top-menu ul li a:hover {
-	color: #ef664d;
+	color: var(--orange);
 	
 	
 }
 .top-menu ul li a.active {
-	color: #ef664d;
+	color: var(--orange);
 	font-weight: 600;
 }
 nav a {
@@ -147,13 +157,13 @@ nav a:focus {
 
 }
 .banner_center h1 {
-	color: #eee;
+	color: var(--pink);
 	font-family: 'Arvo', serif;
 	text-transform: uppercase;
 	font-size: 2.4em;
 }
 .banner_center h2 {
-	color: #eee;
+	color: var(--purple);
 	font-family: 'Arvo', serif;
 	text-transform: uppercase;
 	font-size: 2.4em;
@@ -161,7 +171,7 @@ nav a:focus {
 }
 .banner_center h2 span
 {
-	color: #ef664d;
+	color: var(--purple);
 	font-weight: 900;
 }
 .wmuSliderPagination {
@@ -189,8 +199,8 @@ ul.wmuSliderPagination {
 	-webkit-border-radius: 50%;
 }
 .wmuSliderPagination a.wmuActive {
-	background: #ef664d;
-	border-color: #ef664d;
+	background: var(--pink);
+	border-color: var(--orange);
 }
 
 .bannertop_box{
@@ -212,7 +222,7 @@ ul.wmuSliderPagination {
 	font-family: 'Arvo', serif;
 	text-transform: uppercase;
 	font-weight: 400;
-	color: #2a404e;
+	color: var(--pink);
 }
 .services-header h3 span {
 	color: #F0C514;
@@ -230,7 +240,7 @@ ul.wmuSliderPagination {
 	font-size: 1.3em;
 	font-weight: bold;
 	padding: 15px 0;
-	color: #2a404e;
+	color: var(--pink);
 	text-transform: uppercase;
 }
 .services-grid p {
@@ -244,7 +254,7 @@ ul.wmuSliderPagination {
 }
 .works-section{
 	padding:3em 0;
-	background:#2e3e4e;
+	background:var(--gradient);
 	
 }
 .works-header{
@@ -258,7 +268,7 @@ ul.wmuSliderPagination {
 	font-family: 'Arvo', serif;
 	text-transform: uppercase;
 	font-weight: 400;
-	color: #ef664d;
+	color: var(--purple);
 }
 .works-header h3 span {
 	color: #fefefe;
@@ -559,7 +569,7 @@ div#portfoliolist {
 	padding: 0em 0 0em;
 }
 .tab_box{
-	background:#fd926d;
+	background:var(--pink);
 	padding: 2em;
 }
 .top1{
@@ -591,11 +601,11 @@ text-align:right;
 }
 .resp-tab-active,.resp-tab-item:hover{
   text-shadow: none;
-  color:#ef664d;
+  color:var(--purple);
 }
 .resp-tabs-container {
 	padding: 0px;
-	clear: left;
+	clear: right;
 	
 }
 h2.resp-accordion {
@@ -633,19 +643,19 @@ h2.resp-accordion {
 	font-family: 'Arvo', serif;
 	text-transform: uppercase;
 	font-weight: 400;
-	color: #2a404e;
+	color: var(--pink);
 }
 .about-header h3 span {
-	color: #ef664d;;
+	color: var(--purple);;
 
 }
 .about-imag {
 	float: left;
 	width:27%;
-	margin-right:5%
+	margin-right:5%;
+	margin-top: -100px;
 }
 .about-imag img {
-	border: 2px solid #ef664d;
 	border-radius: 103px;
 }
 .about-text {
@@ -669,7 +679,7 @@ h2.resp-accordion {
 }
 .poll-desc h4{
 	font-size: 17px;
-	color: #2a404e;
+	color: var(--pink);
 	font-weight:bold;
 	text-transform: uppercase;
 }
@@ -679,7 +689,7 @@ h2.resp-accordion {
 }
 .percentage p{
 	font-size:17px;
-	color:#2a404e;
+	color:var(--pink);
 	font-weight: bold;
 }
 .skills {
@@ -691,11 +701,11 @@ h2.resp-accordion {
 .skills > div {
 	height: 100%;
 	display: block;
-	background-color: #ef664d;
+	background-color: var(--purple);
 }
 .footer-section {
 	padding: 40px 0px;
-	background: #2e3e4e;
+	background: var(--gradient);
 }
 .contact-header {
 	text-align: center;
@@ -707,7 +717,7 @@ h2.resp-accordion {
 	font-family: 'Arvo', serif;
 	text-transform: uppercase;
 	font-weight: 400;
-	color: #ef664d;
+	color: var(--purple);
 }
 .contact-header h3 span {
 color: #fefefe;
@@ -785,7 +795,7 @@ padding:30px 0;
 }
 .contact {
 	padding-bottom:4em;
-border-bottom: 1px solid#55626f;
+border-bottom: 1px solid #55626f;
 }
 .contactgrid {
 padding-bottom: 2em;
@@ -795,7 +805,7 @@ padding-bottom: 2em;
 	background: none;
 	outline: none;
 	border: none;
-	border-bottom: 1px solid#d5d6d7;
+	border-bottom: 1px solid #d5d6d7;
 	font-size: 15px;
 	color: #d5d6d7;
 	text-transform: capitalize;
@@ -808,7 +818,7 @@ padding-bottom: 2em;
 	outline: none;
 	border: none;
 	resize: none;
-	border-bottom: 1px solid#d5d6d7;
+	border-bottom: 1px solid #d5d6d7;
 	font-size: 15px;
 	color: #d5d6d7;
 	text-transform: capitalize;
@@ -819,7 +829,7 @@ padding-bottom: 2em;
 	padding: 2em 0 0 17em;
 }
 .contactgrid2 input[type="submit"] {
-	color: #ef664d;
+	color: #fff;
 	background: none;
 	border: none;
 	font-size:15px;
@@ -841,7 +851,7 @@ padding-bottom: 2em;
 }
 .footer-bottom a {
 	font-size: 19px;
-	color: #ef664d;
+	color: #fff;
 	font-weight: 400;
 	text-transform: capitalize;
 }
@@ -919,6 +929,9 @@ padding-bottom: 2em;
 			}
 			.about-header h3 {
 			    font-size: 2.2em;
+			}
+			.about-text {
+				height: 100%;
 			}
 			.about-text p{
 				font-size:1em;
@@ -1025,11 +1038,17 @@ padding-bottom: 2em;
 			.about-header h3 {
 				font-size: 2em;
 			}
+			.about-imag {
+				margin-top: 0px;
+			}
 			.about-imag img {
 				width: 80%;
 			}
+			.about-text {
+				height: 100%;
+			}
 			.about-text p {
-				height: 65px;
+				height: 200px;
 				overflow: hidden;
 			}
 			.about-sectiongrids {
@@ -1121,7 +1140,7 @@ padding-bottom: 2em;
 		z-index: 999;
 		position: absolute;
 		width: 96%;
-		background:#2e3e4e;
+		background:var(--gradient);
 		text-align: center;
 	}
 	.top-menu ul li a {
@@ -1195,13 +1214,19 @@ padding-bottom: 2em;
 		.grid_box a:hover .zoom-icon {
 			top: -30px;
 		}
+		.about-text {
+				height: 100%;
+			}
 		.about-text p {
-			height: 46px;
+			height: 200px;
 			overflow: hidden;
 		}
 		.about-header h3 {
 			font-size: 1.5em;
 		}
+		.about-imag {
+				margin-top: 0px;
+			}
 		.about-imag img {
 			width: 70%;
 		}
@@ -1353,6 +1378,9 @@ padding-bottom: 2em;
 		.about-header h3 {
 			font-size: 01.4em;
 		}
+		.about-imag {
+				margin-top: 0px;
+			}
 		.about-imag img {
 			width: 90%;
 		}
@@ -1360,6 +1388,7 @@ padding-bottom: 2em;
 			float: left;
 			width: 64%;
 			margin-top: 4%;
+			height: 100%;
 		}
 		.poll-desc h4 {
 			font-size: 14px;
@@ -1487,8 +1516,12 @@ padding-bottom: 2em;
 		.about-section {
 			padding: 1em 0;
 		}
+		.about-text {
+				height: 100%;
+			}
 		.about-text p {
-			height: 37px;
+			text-align: left;
+			height: 250px;
 			overflow: hidden;
 			font-size: 0.9em;
 		}
