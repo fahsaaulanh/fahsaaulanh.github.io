@@ -40,7 +40,7 @@ section{
     display: inline-block;
     margin-top: 1rem;
     padding:.8rem 3rem;
-    border-radius: 5rem;
+    border-radius: 0.5rem;
     background:var(--gradient);
     font-size: 1.7rem;
     color:#fff;
@@ -51,6 +51,27 @@ section{
 
 .btn:hover{
     transform: scale(1.1);
+}
+
+.btn-outline{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--purple) !important;
+    font-size: 1.7rem;
+    color:var(--pink);
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    transition: all .3s linear;
+}
+
+.btn-outline:hover{
+    border:2px solid var(--pink) !important;
+    color: var(--purple);
+    text-decoration: none !important;
+    transform: scale(1.1);
+
 }
 
 .heading{
