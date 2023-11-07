@@ -1,574 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Fahsa Aula NH</title>
-
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <!-- custom css file link  -->
-    <script type="application/x-javascript">
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-            $(".scroll").click(function (event) {
-                event.preventDefault();
-                $('html,body').animate({
-                    scrollTop: $(this.hash).offset().top
-                }, 1200);
-            });
-        });
-    </script>
-    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/style2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <title>Portofolio | Fahsa Aula Nasaul Husna</title>
 
 </head>
-
 <body>
+    
+    <header class="header">
+        <a href="https://www.youtube.com/watch?v=Tkp3FDgOueM&t=3755s" class="logo">My Portofolio</a>
 
-    <!-- header section starts  -->
+        <i class="bx bx-menu" id="menu-icon"></i>
 
-    <div class="header" id="head">
-        <div class="container">
-            <div class="header-top">
-                <div class="logo">
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about" class="">About</a>
+            <a href="#services" class="">Services</a>
+            <a href="#portofolio" class="">Portofolio</a>
+        </nav>
+    </header>
 
-                </div>
-                <div class="top-menu">
-                    <span class="menu"></span>
-                    <ul>
-                        <nav class="cl-effect-5">
-                            <li><a class="active" href="index.html"><span data-hover="Home">Home</span></a></li>
-                            <li><a href="#about" class="scroll"><span data-hover="About">About</span></a></li>
-                            <li><a href="#portofolio" class="scroll"><span
-                                        data-hover="Portofolio"><span>Portofolio</span></a>
-                            </li>
-                            <li><a href="#project" class="scroll"><span data-hover="Project">Project</span></a></li>
-                            <li><a href="#contact" class="scroll"><span data-hover="Contact">Contact</span></a></li>
-                        </nav>
-                    </ul>
-                </div>
-                <!--script-nav-->
-                <script>
-                    $("span.menu").click(function () {
-                        $(".top-menu ul").slideToggle("slow", function () {});
-                    });
-                </script>
-                <div class="clearfix"></div>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Fahsa Aula Nasaul Husna</h1>
+            <h3>And I'm a <span>Game Programmer</span></h3>
+            <p>
+                I am a game developer who specializes in
+                developing VR and Metaverse experiences. I also stay updated with the latest developments in the
+                gaming and VR industry, including technologies like augmented reality (AR) and mixed reality (MR).
+                I am always seeking opportunities to enhance my skills and create innovative experiences using the
+                latest technologies.
+            </p>
+            <div class="social-media">
+                <a href="https://facebook.com/fahsa.aula"><i class="bx bxl-facebook"></i></a>
+                <a href="https://github.com/fahsaaulanh"><i class="bx bxl-github"></i></a>
+                <a href="https://www.instagram.com/nay_nas_/"><i class="bx bxl-instagram-alt"></i></a>
+                <a href="https://www.linkedin.com/in/fahsa-aula-nasaul-husna-248325202/"><i class="bx bxl-linkedin"></i></a>
             </div>
-            <div class="index-banner">
-                <div class="wmuSlider example1">
-                    <div class="wmuSliderWrapper">
-                        <article style="position: absolute; width: 100%; opacity: 0;">
-                            <div class="banner-wrap">
-                                <div class="banner_center">
-                                    <h1>Hi It's Me!</h1>
-                                    <h2>I'm a <span>Game & Backend Programmer</span></h2>
-                                </div>
-                            </div>
-                        </article>
-                        <article style="position: relative; width: 100%; opacity: 1;">
-                            <div class="banner-wrap">
-                                <div class="banner_center">
-                                    <h1>I also stay updated with the latest developments</h1>
-                                    <h2>in the gaming <span>and VR industry</span></h2>
-                                    <h2></h2>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                </div>
-                <script src="js/jquery.wmuSlider.js"></script>
-                <script>
-                    $('.example1').wmuSlider();
-                </script>
-            </div>
+            <a href="#" class="btn">Download CV Here</a>
         </div>
-    </div>
-
-    <!-- home section ends -->
-
-    <!-- features section starts  -->
-
-    <div class="content">
-        <div class="about-section" id="about" id="about">
-            <div class="container">
-                <div class="about-header">
-                    <h3>About Me</h3>
-                    <div class="about-imag">
-                        <img src="images/Profil.png" style="" width="200px" heigh="200px" alt="" />
-                    </div>
-                    <div class="about-text">
-                        <p> I am a bachelor's degree student majoring in Multimedia Engineering Technology, with expertise
-                            and interest in the field of interactive multimedia. I am a game developer who specializes in
-                            developing VR and Metaverse experiences. I also stay updated with the latest developments in the
-                            gaming and VR industry, including technologies like augmented reality (AR) and mixed reality (MR).
-                            I am always seeking opportunities to enhance my skills and create innovative experiences using the
-                            latest technologies.
-                            I possess strong teamwork abilities and can collaborate effectively with designers, artists, and other
-                            developers to achieve project goals. I also have strong problem-solving skills and can quickly and
-                            efficiently overcome technical challenges.
-                            With my combined skills in game development, VR, and Metaverse, I am ready to contribute to
-                            challenging projects that focus on creating amazing interactive experiences for players and users.</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- portfolio-section-ends -->
-    <div class="services-section" id="services">
-        <div class="container">
-            <div class="services-header">
-                <br>
-                <br>
-            </div>
-            <div class="services-sectiongrids">
-                <div class="col-md-4 services-grid">
-                    <img src="images/html.png " style="width: 40%; height: 40%;" alt="" />
-                    <p></p>
-                </div>
-                <div class="col-md-4 services-grid">
-                    <img src="images/php.png" style="width: 40%; height: 40%;" alt="" />
-                </div>
-                <div class="col-md-4 services-grid">
-                    <img src="images/mysql.png" style="width: 40%; height: 40%;" alt="" />
-                </div>
-                <div class="col-md-4 services-grid">
-                    <img src="images/postgre.png" style="width: 40%; height: 40%;" alt="" />
-                </div>
-                <div class="col-md-4 services-grid">
-                    <img src="images/laravel.png" style="width: 50%; height: 50%;" alt="" />
-                </div>
-                <div class="col-md-4 services-grid">
-                    <img src="images/unity.png" style="width: 40%; height: 40%;" alt="" />
-                </div>
-                <div class="col-md-4 services-grid">
-                    <img src="images/csharp.png" style="width: 40%; height: 40%;  margin-top: 5rem; " alt="" />
-                </div>
-                <div class="clearfix"></div>
-                <div class="arrow1">
-                    <a href="#portofolio" class="scroll"><img src="images/arrow1.png" alt="" /></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- services-section-ends -->
-
-    <!-- portfolio -->
-    <div class="newsletter">
-        <div class="works-header">
-            <h3 class="text-white">Portfolio</h3>
-        </div>
-        <div class="portfolio-section-bottom-row" id="portofolio">
-            <div class="container">
-
-                <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
-                <script type="text/javascript">
-                    $(document).ready(function () {
-                        $('#horizontalTab').easyResponsiveTabs({
-                            type: 'default', //Types: default, vertical, accordion           
-                            width: 'auto', //auto or any width like 600px
-                            fit: true // 100% fit in a container
-                        });
-                    });
-                </script>
-                <link rel="stylesheet" href="css/swipebox.css">
-                <script src="js/jquery.swipebox.min.js"></script>
-                <script type="text/javascript">
-                    jQuery(function ($) {
-                        $(".swipebox").swipebox();
-                    });
-                </script>
-                <!-- Portfolio Ends Here -->
-                <div class="sap_tabs">
-                    <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-                        <ul class="resp-tabs-list">
-                            <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>GAME DEV</span></li>
-                            <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>WEB DEV</span>
-                            </li>
-                            <li class="resp-tab-item" aria-controls="tab_item-3" role="tab"><span>Certificate</span>
-                            </li>
-                            <!-- <li class="resp-tab-item" aria-controls="tab_item-4" role="tab"><span>Photography</span></li> -->
-                            <div class="clearfix"></div>
-                        </ul>
-                        <div id="portfoliolist">
-                            <div class="resp-tabs-container">
-                                <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-                                    <div class="tab_img">
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/pic-5.jpeg" class="swipebox" title="Image Title">
-                                                <img src="images/pic-5.jpeg" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/pic-7.jpeg" class="swipebox" title="Image Title">
-                                                <img src="images/pic-7.jpeg" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/pic-6.jpeg" class="swipebox" title="Image Title">
-                                                <img src="images/pic-6.jpeg" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/pic-11.jpeg" class="swipebox" title="Image Title">
-                                                <img src="images/pic-11.jpeg" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/pic-12.jpeg" class="swipebox" title="Image Title">
-                                                <img src="images/pic-12.jpeg" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/pic-13.jpeg" class="swipebox" title="Image Title">
-                                                <img src="images/pic-13.jpeg" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/pic-15.jpeg" class="swipebox" title="Image Title">
-                                                <img src="images/pic-15.jpeg" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/pic-16.jpeg" class="swipebox" title="Image Title">
-                                                <img src="images/pic-16.jpeg" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                                <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
-                                    <div class="tab_img">
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/web1.png" class="swipebox" title="Image Title">
-                                                <img src="images/web1.png" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/web2.png" class="swipebox" title="Image Title">
-                                                <img src="images/web2.png" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/web3.png" class="swipebox" title="Image Title">
-                                                <img src="images/web3.png" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/web4.png" class="swipebox" title="Image Title">
-                                                <img src="images/web4.png" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/web5.png" class="swipebox" title="Image Title">
-                                                <img src="images/web5.png" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/web6.png" class="swipebox" title="Image Title">
-                                                <img src="images/web6.png" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/web7.png" class="swipebox" title="Image Title">
-                                                <img src="images/web7.png" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                                <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
-
-                                    <div class="tab_img">
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/sertif1.jpeg" class="swipebox" title="Image Title">
-                                                <img src="images/sertif1.jpeg" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/sertif0.jpeg" class="swipebox" title="Image Title">
-                                                <img src="images/sertif0.jpeg" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/sertif2.jpg" class="swipebox" title="Image Title">
-                                                <img src="images/sertif2.jpg" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/sertif4.jpg" class="swipebox" title="Image Title">
-                                                <img src="images/sertif4.jpg" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/sertif5.jpg" class="swipebox" title="Image Title">
-                                                <img src="images/sertif5.jpg" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/sertif6.jpg" class="swipebox" title="Image Title">
-                                                <img src="images/sertif6.jpg" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/sertif8.png" class="swipebox" title="Image Title">
-                                                <img src="images/sertif8.png" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 img-top grid_box">
-                                            <a href="images/sertif7.jpg" class="swipebox" title="Image Title">
-                                                <img src="images/sertif7.jpg" class="img-responsive" alt="">
-                                                <span class="zoom-icon"></span>
-                                            </a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="arrow">
-                    <a href="#project" class="scroll"><img src="images/arrow.png" alt="" /></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section class="features" id="project">
-
-        <h1 class="heading"> Project </h1>
-
-        <div class="box-container">
-            <div class="box">
-                <img src="images/Logo TLOH.png" alt="">
-                <h3>The Legend Of History</h3>
-                <p>Game The Legend Of History merupakan game edukasi petualangan yang mengekplor budaya dan sejarah
-                    Indonesia, game ini menceritakan petualangan Hilton yang terbawa ke zaman Hindu-Budha ketika sedang
-                    berkunjung ke museum sejarah, bagaimana kelanjutannya? Install dan mainkan Game The Legend Of
-                    History!</p>
-                <div class="row">
-                    <div class="col-6">
-                        <a href="https://fahsaaula.itch.io/the-legend-of-history" class="btn-outline">Mainkan</a>
-                    </div>
-                    <div class="col-6">
-                        <a href="https://play.google.com/store/apps/details?id=com.SMKWikrama.TheLegendOfHistory"
-                            class="btn">Download</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="images/Icon.png" alt="">
-                <h3>Game Hilton In Tropical</h3>
-                <p>Game Hilton In Tropical merupakan seri petualangan hilton yang kedua, berbeda dari seri sebelumnya
-                    yang bertemakan sejarah dan budaya indonesia, pada game Hilton In Tropical ini Hilton berlatarkan
-                    hutan tropis yang menggambarkan kondisi iklim Indonesia, didalamnya juga terdapat banyak mini games
-                    lainnya yang tak kalah menarik.</p>
-                <div class="row">
-                    <div class="col-6">
-                        <a href="https://fahsaaula.itch.io/hilton-in-tropical" class="btn-outline">Mainkan</a>
-                    </div>
-                    <div class="col-6">
-                        <a href="https://drive.google.com/folderview?id=1tlfeVn1Zb4hwiKoxmpq5qePIjMJsE6p-"
-                            class="btn">Download</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="images/Icon-vh.png" alt="">
-                <h3>Game Vocation Hotel</h3>
-                <p>Disini
-                    kamu akan menjadi Housekeeping yang akan berperan besar dalam kemajuan hotel.
-                    Dalam mencapai kemajuan tersebut, kamu memiliki misi untuk menyelesaikan seluruh
-                    tugas yang terdapat pada hotel ini. Dapatkan lebih banyak bintang dan akses lebih
-                    banyak level serta mini games lainnya</p>
-                <div class="row">
-                    <div class="col-6">
-                        <a href="https://fahsaaula.itch.io/vocation-hotel" class="btn-outline">Mainkan</a>
-                    </div>
-                    <div class="col-6">
-                        <a href="https://drive.google.com/folderview?id=1c62Rg5WVy6ZkK893O2sgkNJ4fuzd6xJN"
-                            class="btn">Download</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="clearfix"></div>
-        <div class="arrow1">
-            <a href="#contact" class="scroll"><img src="images/arrow1.png" alt="" /></a>
+        <div class="home-img">
+            <img src="images/Profil@1.5x.png" alt="">
         </div>
     </section>
 
-    <!-- features section ends -->
 
-
-    <!-- newsletter  -->
-
-    <div class="newsletter">
-        <br>
-        <br>
-        <br>
-        <h3>Quote</h3>
-        <p>"Hiduplah seolah engkau mati besok. Belajarlah seolah engkau hidup selamanya." - Mahatma Gandhi</p>
-        <br>
-        <br>
-    </div>
-
-
-    <!-- contact section starts  -->
-
-    <section class="contact" id="contact">
-
-        <div class="image">
-            <img src="images/contact-img.png" alt="">
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/Profil@1.5x.png" alt="">
         </div>
 
-        <form action="">
-
-            <h1 class="heading">contact Me</h1>
-
-            <div class="inputBox">
-                <input type="text" required>
-                <label>name</label>
-            </div>
-
-            <div class="inputBox">
-                <input type="email" required>
-                <label>email</label>
-            </div>
-
-            <div class="inputBox">
-                <input type="number" required>
-                <label>phone</label>
-            </div>
-
-            <div class="inputBox">
-                <textarea required name="" id="" cols="30" rows="10"></textarea>
-                <label>message</label>
-            </div>
-
-            <input type="submit" class="btn" value="send message">
-
-        </form>
-
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Game Programmer</h3>
+            <p>
+                I am a bachelor's degree student majoring in Multimedia Engineering Technology, with expertise
+                and interest in the field of interactive multimedia. I am a game developer who specializes in
+                developing VR and Metaverse experiences. I also stay updated with the latest developments in the
+                gaming and VR industry, including technologies like augmented reality (AR) and mixed reality (MR).
+                I am always seeking opportunities to enhance my skills and create innovative experiences using the
+                latest technologies.
+                I possess strong teamwork abilities and can collaborate effectively with designers, artists, and other
+                developers to achieve project goals. I also have strong problem-solving skills and can quickly and
+                efficiently overcome technical challenges.
+                With my combined skills in game development, VR, and Metaverse, I am ready to contribute to
+                challenging projects that focus on creating amazing interactive experiences for players and users
+            </p>
+        </div>
     </section>
 
-    <!-- contact section edns -->
-
-    <!-- footer section starts  -->
-
-    <div class="footer">
-
-        <div class="box-container">
-
-            <div class="box">
-                <h3>quick links</h3>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#portofolio">Portofolio</a>
-                <a href="#project">Project</a>
-                <a href="#contact">Contact</a>
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bxs-joystick'></i>
+                <h3>Game Development</h3>
+                <p>Level Up Your Dreams: From Concept to Reality with Our Game Development Service. Let's Bring Your Imagination to Life!</p>
+                <!-- <a href="#" class="btn">Read more</a> -->
             </div>
-
-            <div class="box">
-                <h3>follow Me</h3>
-                <a href="https://www.facebook.com/fahsa.aula">facebook</a>
-                <a href="https://instagram.com/nay_nas_?igshid=YmMyMTA2M2Y=">instagram</a>
-                <a href="https://www.linkedin.com/in/fahsa-aula-nasaul-husna-248325202">linkedin</a>
-                <a href="https://github.com/fahsaaulanh">github</a>
+            <div class="services-box">
+                <i class='bx bx-code-block' ></i>
+                <h3>C# Programming</h3>
+                <p>Unlocking Virtual Realms: Your Vision, Our Code. Elevate Your Gaming Experience with Our Expert Game Programming Service.</p>
+                <!-- <a href="#" class="btn">Read more</a> -->
             </div>
+            <div class="services-box">
+                <i class='bx bxs-ghost' ></i>
+                <h3>VR Development</h3>
+                <p>Step into the Extraordinary: Crafting Immersive Realities through VR Development. Explore Limitless Possibilities with Our Expertise.</p>
+                <!-- <a href="#" class="btn">Read more</a> -->
+            </div>
+        </div>
+    </section>
 
-            <div class="box">
-                <h3>contact info</h3>
-                <div class="info">
-                    <i class="fas fa-phone"></i>
-                    <p> +62 857 8070 0419
-                </div>
-                <div class="info">
-                    <i class="fas fa-envelope"></i>
-                    <p> fahsaaula8@gmail.com
-                </div>
-                <div class="info">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p> Jawa Barat, Indonesia - 43358 </p>
+    <section class="portofolio" id="portofolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+
+        <div class="portofolio-container">
+            <div class="portofolio-box">
+                <img src="images/Porto-colorfun2.png" alt="">
+                <div class="portofolio-layer">
+                    <h4>ColorFun</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="d-flex justify-content-between">
+                        <a href="" class="m-2"><i class="bx bx-link-external"></i></a>
+                        <a href="" class="m-2"><i class='bx bx-joystick-alt' ></i></i></a>
+                    </div>
                 </div>
             </div>
+            <div class="portofolio-box">
+                <img src="images/Porto-wingy1.png" alt="">
+                <div class="portofolio-layer">
+                    <h4>Wingy</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href=""><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portofolio-box">
+                <img src="images/Porto-punakawan.png" alt="">
+                <div class="portofolio-layer">
+                    <h4>Punakawan Meokbang</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, voluptatibus temporibus minus deserunt rem deleniti laudantium dicta voluptatum? Est fugiat ipsam asperiores, nihil voluptatum minima!</p>
+                    <a href=""><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portofolio-box">
+                <img src="images/pic-5.jpeg" alt="">
+                <div class="portofolio-layer">
+                    <h4>Hilton In Tropical</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href=""><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portofolio-box">
+                <img src="images/pic-16.jpeg" alt="">
+                <div class="portofolio-layer">
+                    <h4>Game Dev</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, voluptatibus temporibus minus deserunt rem deleniti laudantium dicta voluptatum? Est fugiat ipsam asperiores, nihil voluptatum minima!</p>
+                    <a href=""><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portofolio-box">
+                <img src="images/pic-12.jpeg" alt="">
+                <div class="portofolio-layer">
+                    <h4>Game Dev</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, voluptatibus temporibus minus deserunt rem deleniti laudantium dicta voluptatum? Est fugiat ipsam asperiores, nihil voluptatum minima!</p>
+                    <a href=""><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="experiences">
+        <h2 class="heading">Experiences <span>& Certification</span></h2>
+        <div class="experiences-container">
+            <div id="carouselExampleDark" class="carousel carousel-custom slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="images/fga2.JPG" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Game Creation Fresh Graduate Academy</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="images/fga4.JPG" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/fga1.JPG" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                    <img src="images/times3.JPG" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Game Creation Fresh Graduate Academy</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="images/bali1.JPG" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Game Programming Agate x BDI Denpasar</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/times1.JPG" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Fahsa Aula | All Rights Reserved.</p>
         </div>
 
-        <h1 class="credit"> &copy; copyright @ 2021 Fahsa Aula NH </h1>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+        </div>
+    </footer>
 
-    </div>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- footer section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <script src="js/script.js"></script>
 </body>
-
 </html>
