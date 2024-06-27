@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Kalkulator Sederhana</title>
+    <style>
+        input[type="button"] {
+            width: 70px;
+            height: 70px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <div class="d-flex justify-content-center">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Kalkulator Sederhana</h2>
+                    <input type="text" class="form-control" id="display" disabled>
+                    <div class="d-flex justify-content-between mt-2">
+                        <input type="button" value="1" onclick="appendValue('1')">
+                        <input type="button" value="2" onclick="appendValue('2')">
+                        <input type="button" value="3" onclick="appendValue('3')">
+                        <input type="button" value="+" onclick="appendValue('+')">
+                    </div>
+                    <div class="d-flex justify-content-between mt-2">
+                        <input type="button" value="4" onclick="appendValue('4')">
+                        <input type="button" value="5" onclick="appendValue('5')">
+                        <input type="button" value="6" onclick="appendValue('6')">
+                        <input type="button" value="-" onclick="appendValue('-')">
+                    </div>
+                    <div class="d-flex justify-content-between mt-2">
+                        <input type="button" value="7" onclick="appendValue('7')">
+                        <input type="button" value="8" onclick="appendValue('8')">
+                        <input type="button" value="9" onclick="appendValue('9')">
+                        <input type="button" value="*" onclick="appendValue('*')">
+                    </div>
+                    <div class="d-flex justify-content-between mt-2">
+                        <input type="button" value="0" onclick="appendValue('0')">
+                        <input type="button" value="." onclick="appendValue('.')">
+                        <input type="button" value="/" onclick="appendValue('/')">
+                        <input type="button" value="C" onclick="clearDisplay()">
+                    </div>
+                    <div class="d-flex justify-content-between mt-2">
+                        <input type="button" value="=" onclick="calculate()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function appendValue(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function calculate() {
+            var result = eval(document.getElementById('display').value);
+            document.getElementById('display').value = result;
+        }
+    </script>
+</body>
+</html>

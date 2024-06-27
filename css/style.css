@@ -57,6 +57,12 @@ section
     z-index: 100;
 }
 
+.header a:hover
+{
+    cursor: pointer;
+    color: white;
+}
+
 .header.sticky
 {
     border-bottom: .3rem solid rgba(0, 0, 0, 0.2);
@@ -114,6 +120,7 @@ section
 span
 {
     color: var(--purple);
+    text-shadow: 0 0 1rem var(--purple);
 }
 
 .home-content h3:nth-of-type(2)
@@ -260,49 +267,62 @@ span
     margin: 1rem 0rem 2rem;
 }
 
-.portofolio
-{
+/* Ensure active tab content is visible */
+.tab-pane {
+    opacity: 0; /* Default all tabs to hidden */
+    visibility: hidden; /* Hide all tabs initially */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Add transition for smooth effect */
+}
+
+.tab-pane.show {
+    opacity: 1; /* Show active tab */
+    visibility: visible; /* Make visible */
+}
+
+.portofolio {
     background: var(--second-bg-color);
 }
 
-.portofolio h2
-{
+.portofolio h2 {
     margin-bottom: 4rem;
 }
 
-.portofolio-container
-{
+.portofolio-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
+    padding-bottom: 10vh;
 }
 
-.portofolio-container .portofolio-box
-{
+.portofolio-container .portofolio-box {
     position: relative;
-    width: auto;
     border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
+    box-shadow: var(--box-shadow);
     overflow: hidden;
     display: flex;
+    opacity: 1 !important; /* Ensure the portfolio boxes are visible */
+    transform: none !important; /* Reset any transformations */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effects */
 }
 
-.portofolio-box img
-{
+.portofolio-container .portofolio-box:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Intensify the shadow on hover */
+}
+
+.portofolio-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: .5s ease;
+    transition: transform 0.5s ease; /* Smooth scale transition */
 }
 
-.portofolio-box:hover img
-{
+.portofolio-box:hover img {
     transform: scale(1.1);
 }
 
-.portofolio-box .portofolio-layer
-{
+.portofolio-box .portofolio-layer {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -316,27 +336,29 @@ span
     text-align: center;
     padding: 0 4rem;
     transform: translateY(100%);
-    transition: .5s ease;
+    transition: transform 0.5s ease;
 }
 
-.portofolio-box:hover .portofolio-layer
-{
+.portofolio-box:hover .portofolio-layer {
     transform: translateY(0);
 }
 
-.portofolio-layer h4
-{
+.portofolio-layer h4 {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
-.portofolio-layer p
-{
+.portofolio-layer p {
     font-size: 1.3rem;
     margin: .2rem 0 1rem;
+    color: var(--text-color);
+    opacity: 0.8;
 }
 
-.portofolio-layer a
-{
+.portofolio-layer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -344,14 +366,53 @@ span
     height: 5rem;
     background: var(--text-color);
     border-radius: 50%;
+    margin-top: 1rem;
 }
 
-.portofolio-layer a i
-{
+.portofolio-layer a i {
     font-size: 2rem;
     color: var(--second-bg-color);
-    transform: .5s ease;
+    transition: 0.5s ease;
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    list-style: none;
+}
+
+.pagination li {
+    margin: 0 0.5rem;
+}
+
+.pagination li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 4rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 50%;
+    transition: background 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pagination li a:hover,
+.pagination li a.active {
+    background: var(--purple) !important;
+    color: var(--second-bg-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pagination li a.active
+{
+    background: var(--pink) !important;
+}
+
 
 .experiences
 {
@@ -476,6 +537,172 @@ span
     color: var(--second-bg-color);
 }
 
+.project-detail {
+  background: var(--second-bg-color);
+  padding: 5rem 9%;
+  text-align: center;
+}
+
+.project-detail h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.project-detail .project-content {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.project-detail img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.project-detail p {
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+.hero
+{
+    background: var(--second-bg-color);
+    padding-bottom: 10vh;
+}
+
+.hero .card
+{
+    border-radius: 2vh !important;
+    box-shadow: 0 0 2rem var(--purple);
+}
+
+.hero-img img
+{
+    width: 100%;
+    height: auto;
+}
+
+.heading
+{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.hero-content h2
+{
+    color: var(--pink);
+    text-align: left;
+    line-height: 1.2;
+}
+
+.hero-content h3
+{
+    font-size: 2.6rem;
+}
+
+.hero-content p
+{
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+section.porto-description
+{
+    min-height: 30vh;
+}
+
+.porto-description
+{
+    display: flex;
+    background: var(--bg-color);
+    padding-bottom: 20vh;
+    gap: 5rem;
+}
+
+.porto-description h2
+{
+    color: var(--pink);
+    text-align: left;
+    line-height: 1.2;
+}
+
+.porto-description h3
+{
+    font-size: 2.6rem;
+}
+
+.porto-description p
+{
+    word-wrap: break-word; /* Membantu memecah kata panjang */
+    word-break: break-word; /* Memecah kata di mana saja */
+    font-size: 1.8vh;
+    line-height: 1.6; /* Menambah jarak antar baris */
+    text-align: justify; /* Membuat teks rata kiri dan kanan */
+    margin: 0 0 15px 0; /* Menambah margin bawah untuk spasi antar paragraf */
+     /* Menambah padding untuk spasi dalam paragraf */
+}
+
+.porto-description .carousel
+{
+    width: 500vh;
+    height: fit-content;
+    border-radius: 1vh;
+    overflow: hidden;
+}
+
+.porto-description .carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Carousel control buttons styling */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--purple);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:pink;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: pink;
+    color: var(--purple);
+    cursor: pointer;
+}
+
+
+@media (max-width: 991.98px) {
+    .hero {
+        display: none;
+    }
+
+    .hero .iframe-container
+    {
+        overflow: hidden;
+    }
+}
 
 @media(max-width: 1200px)
 {
@@ -514,6 +741,16 @@ span
     .footer
     {
         padding: 2rem 3%;
+    }
+
+    .porto-description
+    {
+        flex-direction: column-reverse;
+    }
+
+    .porto-description .carousel
+    {
+        width: 100%;
     }
 
 }
@@ -596,6 +833,20 @@ span
     {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .porto-description
+    {
+        flex-direction: column-reverse;
+    }
+
+    .porto-description .carousel
+    {
+        width: 100%;
+    }
+
+    .porto-description .carousel-inner img {
+        height: auto;
+    }
 }
 
 @media (max-width: 617px)
@@ -603,6 +854,28 @@ span
     .portofolio-container
     {
         grid-template-columns: 1fr;
+    }
+
+    .porto-description
+    {
+        padding-bottom: 10vh;
+    }
+
+    .porto-description .carousel
+    {
+        width: 100%vh;
+    }
+
+    .porto-description p
+    {
+        word-wrap: break-word; /* Membantu memecah kata panjang */
+        word-break: break-word; /* Memecah kata di mana saja */
+        font-size: 2vh;
+        line-height: 1.6; 
+    }
+
+    .porto-description .carousel-inner img {
+        height: auto;
     }
 }
 

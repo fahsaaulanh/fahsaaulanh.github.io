@@ -50,7 +50,7 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .portofolio-box, .contact-form, .carousel-inner', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .services-container, .portofolio-box, .pagination, .contact-form, .carousel-inner', { origin: 'bottom' });
 ScrollReveal().reveal('.about-img', { origin: 'left' });
 
 /*==================== typed js ====================*/
