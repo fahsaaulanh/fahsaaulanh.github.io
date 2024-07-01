@@ -267,6 +267,30 @@ span
     margin: 1rem 0rem 2rem;
 }
 
+.services-box .logo-skills
+{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.services-box .logo-skills img
+{
+    background-color: var(--bg-color);
+    box-shadow: 0 0 1rem var(--purple);
+    border-radius: 50%;
+    width: 7vh;
+}
+
+.services-box .logo-skills img:hover
+{
+    box-shadow: 0 0 1rem var(--pink);
+    cursor: pointer;
+}
+
 /* Ensure active tab content is visible */
 .tab-pane {
     opacity: 0; /* Default all tabs to hidden */
