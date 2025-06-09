@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Portofolio | Fahsa Aula Nasaul Husna</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo"
+        >Fahsa Aula <span>Nasaul Husna</span></a
+      >
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about" class="">About</a>
+        <a href="#skills" class="">Skills</a>
+        <a href="#portofolio" class="">Portofolio</a>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello, It's Me</h3>
+        <h1>Fahsa Aula Nasaul Husna</h1>
+        <h3>And I'm a <span>Multimedia Engineer</span></h3>
+        <p>
+          "Hi there! 👋 Welcome to my portfolio!
+I'm thrilled to share my journey, projects, and passion for technology and creativity with you. Dive in, explore, and let’s create something amazing together!" 😊
+        </p>
+        <div class="social-media">
+          <a href="https://facebook.com/fahsa.aula"
+            ><i class="bx bxl-facebook"></i
+          ></a>
+          <a href="https://github.com/fahsaaulanh"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a href="https://www.instagram.com/nay_nas_/"
+            ><i class="bx bxl-instagram-alt"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/fahsa-aula-nasaul-husna-248325202/"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+        </div>
+        <a href="#" class="btn" id="downloadButton" onclick="downloadCV()"
+          >Download CV Here</a
+        >
+      </div>
+      <div class="home-img">
+        <img src="images/Profil@1.5x.png" alt="" />
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="images/Profil@1.5x.png" alt="" />
+      </div>
+
+      <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Multimedia Engineer</h3>
+        <p>
+          I’m an undergraduate student at Telkom University majoring in Multimedia Engineering 
+          Technology. My expertise lies in game development using Unity, and I’m passionate about 
+          exploring Augmented Reality (AR), backend programming, and mobile app development with 
+          Flutter. 
+          Throughout my studies, I’ve gained hands-on experience by working on various academic projects 
+          and freelance tasks, which have helped me build a solid foundation in developing interactive 
+          applications and multimedia solutions. These projects have allowed me to apply what I’ve learned 
+          in class and grow my technical and problem-solving skills. 
+          With my enthusiasm for technology and eagerness to keep learning, I’m motivated to contribute 
+          to the creative tech industry and further develop my skills in interactive media and software 
+          development. 
+        </p>
+      </div>
+    </section>
+
+    <section class="services" id="skills">
+      <h2 class="heading">My <span>Skills</span></h2>
+      <div class="services-container">
+        <div class="services-box">
+          <i class="bx bxs-joystick"></i>
+          <h3>Game Development</h3>
+          <div class="logo-skills">
+            <img src="images/icon/1.png" alt="">
+            <img src="images/icon/2.png" alt="">
+            <img src="images/icon/4.png" alt="">
+            <img src="images/icon/5.png" alt="">
+            <img src="images/icon/11.png" alt="">
+          </div>
+          <!-- <a href="#" class="btn">Read more</a> -->
+        </div>
+        <div class="services-box">
+          <i class="bx bx-code-block"></i>
+          <h3>Web Development</h3>
+          <div class="logo-skills">
+            <img src="images/icon/6.png" alt="">
+            <img src="images/icon/7.png" alt="">
+            <img src="images/icon/8.png" alt="">
+            <img src="images/icon/9.png" alt="">
+            <img src="images/icon/10.png" alt="">
+          </div>
+          <!-- <a href="#" class="btn">Read more</a> -->
+        </div>
+        <div class="services-box">
+          <i class="bx bxs-ghost"></i>
+          <h3>Multimedia Tools</h3>
+          <div class="logo-skills">
+            <img src="images/icon/15.png" alt="">
+            <img src="images/icon/3.png" alt="">
+            <img src="images/icon/12.png" alt="">
+            <img src="images/icon/13.png" alt="">
+            <img src="images/icon/14.png" alt="">
+          </div>
+          <!-- <a href="#" class="btn">Read more</a> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="portofolio" id="portofolio">
+      <h2 class="heading">Latest <span>Projects</span></h2>
+      <div class="container">
+        <ul class="nav nav-tabs pagination" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link active"
+              id="all-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#all"
+              type="button"
+              role="tab"
+              aria-controls="all"
+              aria-selected="true"
+            >
+              All
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link"
+              id="games-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#games"
+              type="button"
+              role="tab"
+              aria-controls="games"
+              aria-selected="false"
+            >
+              Games
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link"
+              id="vr-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#vr"
+              type="button"
+              role="tab"
+              aria-controls="vr"
+              aria-selected="false"
+            >
+              3D
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="all"
+            role="tabpanel"
+            aria-labelledby="all-tab"
+          >
+            <div class="portofolio-container">
+              <div class="portofolio-box">
+                <img src="images/Timescape-cover.png" alt="" />
+                <div class="portofolio-layer">
+                  <h4>Timescape2</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <a href="Timescape-detail.html"
+                      ><i class="bx bx-link-external"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="portofolio-box">
+                <img src="images/robolab-cover.png" alt="" />
+                <div class="portofolio-layer">
+                  <h5>AR Book Robolab</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <a
+                      href="https://www.figma.com/proto/ioJDCvrqXRFcyLqFdBNauL/UI-%2F-UX-Tubes?page-id=0%3A1&node-id=144-9&viewport=-60%2C498%2C0.22&t=p8lKRWHybvyFdJPY-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=318%3A1350"
+                      ><i class="bx bx-link-external"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="portofolio-box">
+                <img src="images/LuxBeauty/Picture1.png" alt="" />
+                <div class="portofolio-layer">
+                  <h4>Web E-Commerce LuxBeauty</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <a
+                      href="luxbeauty-detail.html"
+                      ><i class="bx bx-link-external"></i
+                    ></a>
+                  </div>
+                </div>
+              </div> -->
+              <div class="portofolio-box">
+                <img src="images/Porto-mathfalls1.png" alt="" />
+                <div class="portofolio-layer">
+                  <h4>MathFalls</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <a href="mathfalls-detail.html"
+                      ><i class="bx bx-link-external"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="portofolio-box">
+                <img src="images/UIUX/4.png" alt="" />
+                <div class="portofolio-layer">
+                  <h5>Desain UI/UX E-Commerce Fears</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <a
+                      href="https://www.figma.com/proto/ioJDCvrqXRFcyLqFdBNauL/UI-%2F-UX-Tubes?page-id=0%3A1&node-id=144-9&viewport=-60%2C498%2C0.22&t=p8lKRWHybvyFdJPY-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=318%3A1350"
+                      ><i class="bx bx-link-external"></i
+                    ></a>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div class="portofolio-box">
+                <img src="images/LuxBeauty/Picture1.png" alt="" />
+                <div class="portofolio-layer">
+                  <h4>Web E-Commerce LuxBeauty</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <a
+                      href="luxbeauty-detail.html"
+                      ><i class="bx bx-link-external"></i
+                    ></a>
+                  </div>
+                </div>
+              </div> -->
+              <div class="portofolio-box">
+                <img src="images/Porto-colorfun2.png" alt="" />
+                <div class="portofolio-layer">
+                  <h4>ColorFun</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <div class="d-flex justify-content-between">
+                    <a
+                      href="colorfun-detail.html"
+                      ><i class="bx bx-link-external"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="portofolio-box">
+                <img src="images/Porto-wingy1.png" alt="" />
+                <div class="portofolio-layer">
+                  <h4>Wingy</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <a href="wingy-detail.html"><i class="bx bx-link-external"></i></a>
+                </div>
+              </div>
+              <div class="portofolio-box">
+                <img src="images/Porto-punakawan.png" alt="" />
+                <div class="portofolio-layer">
+                  <h5>Punakawan Meokbang</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Fugit, voluptatibus temporibus minus 
+                    </p>
+                  <a href=""><i class="bx bx-link-external"></i></a>
+                </div>
+              </div>
+              <div class="portofolio-box">
+                <img src="images/pic-5.jpeg" alt="" />
+                <div class="portofolio-layer">
+                  <h4>Hilton In Tropical</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <a href="hilton-detail.html"
+                    ><i class="bx bx-link-external"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="portofolio-box">
+                <img src="images/pic-16.jpeg" alt="" />
+                <div class="portofolio-layer">
+                  <h4>Asep Goes To Space</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <a href=""><i class="bx bx-link-external"></i></a>
+                </div>
+              </div>
+              <div class="portofolio-box">
+                <img src="images/pic-12.jpeg" alt="" />
+                <div class="portofolio-layer">
+                  <h4>Vocation Hotel</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <a href="vacation-detail.html"
+                    ><i class="bx bx-link-external"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- Add more projects here -->
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="games"
+            role="tabpanel"
+            aria-labelledby="games-tab"
+          >
+            <div class="portofolio-container">
+              <div class="portofolio-box">
+                <img src="images/Porto-wingy1.png" alt="" />
+                <div class="portofolio-layer">
+                  <h4>Wingy</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <a href=""><i class="bx bx-link-external"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="vr"
+            role="tabpanel"
+            aria-labelledby="vr-tab"
+          >
+            <div class="portofolio-container">
+              <div class="portofolio-box">
+                <img src="images/pic-5.jpeg" alt="" />
+                <div class="portofolio-layer">
+                  <h4>Hilton In Tropical</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <a href="https://fahsaaula.itch.io/hilton-in-tropical"
+                    ><i class="bx bx-link-external"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experiences">
+      <h2 class="heading">Experiences <span>& Certification</span></h2>
+      <div class="experiences-container">
+        <div
+          id="carouselExampleDark"
+          class="carousel carousel-custom slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="5"
+              aria-label="Slide 6"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="images/fga2.JPG" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Game Creation</h5>
+                <p>Fresh Graduate Academy Kominfo | Bandung, Oktober 2022</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="images/fga4.JPG" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Game Creation</h5>
+                <p>Fresh Graduate Academy Kominfo | Bandung, Oktober 2022</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/fga1.JPG" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Game Creation</h5>
+                <p>Fresh Graduate Academy Kominfo | Bandung, Oktober 2022</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <img src="images/times3.JPG" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Times Telkom University</h5>
+                <p>As Lorem, ipsum dolor. | Bandung, Oktober 2023</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="images/bali1.JPG" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Game Programming</h5>
+                <p>Agate x Balai Diklat Industri Denpasar</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/times1.JPG" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Times Telkom University</h5>
+                <p>As Lorem, ipsum dolor. | Bandung, Oktober 2023</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2023 by Fahsa Aula | All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-iconTop">
+        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="js/script.js"></script>
+    <script>
+      function downloadCV() {
+        // Replace 'your-cv-filename.pdf' with the actual filename and path of your CV.
+        const cvUrl = "CV-Fahsa-Aula.pdf";
+
+        // Create an anchor element to trigger the download.
+        const anchor = document.createElement("a");
+        anchor.href = cvUrl;
+        anchor.download = "CV-Fahsa-Aula.pdf"; // You can customize the downloaded filename here.
+
+        // Trigger a click event on the anchor to initiate the download.
+        anchor.click();
+      }
+    </script>
+
+    <!-- Custom JS -->
+    <script>
+      document.querySelectorAll(".portfolio-box").forEach((box) => {
+        box.addEventListener("click", function () {
+          // Update modal title
+          const title = this.dataset.title;
+          document.getElementById("exampleModalLabel").innerText = title;
+
+          // Update modal description
+          const description = this.dataset.description;
+          document.getElementById("portfolioDescription").innerText =
+            description;
+
+          // Update modal carousel images
+          const images = this.dataset.images.split(",");
+          const carouselInner = document.querySelector(
+            "#carouselExampleIndicators .carousel-inner"
+          );
+          carouselInner.innerHTML = images
+            .map(
+              (image, index) => `
+            <div class="carousel-item ${index === 0 ? "active" : ""}">
+              <img src="${image}" class="d-block w-100" alt="Slide ${
+                index + 1
+              }">
+            </div>
+          `
+            )
+            .join("");
+
+          // Update carousel indicators
+          const carouselIndicators = document.querySelector(
+            ".carousel-indicators"
+          );
+          carouselIndicators.innerHTML = images
+            .map(
+              (_, index) => `
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${index}" ${
+                index === 0 ? 'class="active" aria-current="true"' : ""
+              } aria-label="Slide ${index + 1}"></button>
+          `
+            )
+            .join("");
+        });
+      });
+    </script>
+  </body>
+</html>
