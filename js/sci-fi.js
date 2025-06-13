@@ -489,7 +489,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.05 }
   );
   animatedSections.forEach((section) => {
     sectionObserver.observe(section);
