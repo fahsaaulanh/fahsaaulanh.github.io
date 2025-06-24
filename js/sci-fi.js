@@ -249,11 +249,11 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 1,
       title: "Lingo Song APP",
       category: "Mobile App",
-      image: "images/LingoSong/3.png",
+      image: "images/LingoSong/lingosong_004.png",
       description:
         "English learning app leveraging VAK pedagogy through music-driven activities.",
       tags: ["Unity", "C#", "Firebase", "Playfab"],
-      liveLink: "lingosong.html", // Pastikan Anda memiliki halaman ini
+      liveLink: "Lingosong.html", // Pastikan Anda memiliki halaman ini
       repoLink: "#",
       themeColor: "purple",
     },
