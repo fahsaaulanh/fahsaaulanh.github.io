@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Detail: LuxBeauty E-commerce - Your Portfolio</title>
+  <title>Detail Proyek: LuxBeauty E-commerce - Portofolio Anda</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;700&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="css/color.css" />
   <link rel="stylesheet" href="css/sci-fi.css" />
 
   <style>
+    :root {
+      /* Placeholder: Pastikan variabel ini didefinisikan di css/color.css */
+      --dark: #0f172a;
+      --light: #e2e8f0;
+      --primary: #38bdf8;
+      --secondary: #818cf8;
+      --border-color: rgba(59, 130, 246, 0.2);
+    }
+
     body {
       font-family: "Rajdhani", sans-serif;
       background-color: var(--dark);
@@ -62,7 +81,6 @@
       height: auto;
       max-height: 450px;
       object-fit: cover;
-      /* Changed to cover for better fit */
       display: block;
     }
 
@@ -131,14 +149,14 @@
       class="border-animated group relative inline-flex items-center justify-center px-4 py-2 text-sm font-bold text-[var(--primary)] transition-colors duration-300 rounded-md bg-gray-900/80 backdrop-blur-sm mono hover:text-white hover:shadow-lg hover:shadow-[var(--primary)]/20"
       style="border-color: var(--border-color);">
       <i class="fas fa-chevron-left mr-2 transform group-hover:-translate-x-1 transition-transform duration-300"></i>
-      Back to Portfolio
+      Kembali ke Portofolio
     </a>
   </div>
 
   <main class="container mx-auto px-4 pt-24 pb-16 md:pt-28 md:pb-20">
     <header class="text-center mb-10 md:mb-12 section-detail-hidden">
       <div class="max-w-4xl mx-auto">
-        <p class="text-base sm:text-lg text-gray-400 mono mb-2">[E-commerce Website]</p>
+        <p class="text-base sm:text-lg text-gray-400 mono mb-2">[Situs Web E-commerce]</p>
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-[var(--primary)]">
           <span class="glow">Lux</span>Beauty
         </h1>
@@ -148,30 +166,39 @@
     <section class="mb-10 md:mb-16 section-detail-hidden max-w-5xl mx-auto">
       <div class="border-animated rounded-lg p-px">
         <div class="bg-gray-900/80 rounded-lg overflow-hidden">
-          <img src="images/LuxBeauty/Picture1.png" alt="LuxBeauty Hero Image" class="w-full h-auto object-cover">
+          <img src="images/LuxBeauty/Picture1.png" alt="Tampilan halaman utama situs LuxBeauty"
+            class="w-full h-auto object-cover">
         </div>
       </div>
     </section>
-
 
     <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 section-detail-hidden">
       <div class="lg:col-span-5">
         <div class="border-animated rounded-lg p-px h-full">
           <div class="bg-gray-900/80 rounded-lg p-4 h-full flex flex-col">
             <h3 class="text-xl font-semibold mb-4 text-[var(--secondary)]">
-              Website Screenshots
+              Tangkapan Layar
             </h3>
             <div class="carousel-container flex-grow">
               <div class="carousel-track">
-                <div class="carousel-slide"><img src="images/LuxBeauty/Picture1.png" alt="Screenshot 1" /></div>
-                <div class="carousel-slide"><img src="images/LuxBeauty/Picture3.png" alt="Screenshot 2" /></div>
-                <div class="carousel-slide"><img src="images/LuxBeauty/Picture5.png" alt="Screenshot 3" /></div>
-                <div class="carousel-slide"><img src="images/LuxBeauty/Picture7.png" alt="Screenshot 4" /></div>
-                <div class="carousel-slide"><img src="images/LuxBeauty/Picture13.png" alt="Screenshot 5" /></div>
-                <div class="carousel-slide"><img src="images/LuxBeauty/Picture15.png" alt="Screenshot 6" /></div>
-                <div class="carousel-slide"><img src="images/LuxBeauty/Picture16.png" alt="Screenshot 7" /></div>
-                <div class="carousel-slide"><img src="images/LuxBeauty/Picture17.png" alt="Screenshot 8" /></div>
-                <div class="carousel-slide"><img src="images/LuxBeauty/Picture18.png" alt="Screenshot 9" /></div>
+                <div class="carousel-slide"><img src="images/LuxBeauty/Picture1.png"
+                    alt="Tangkapan Layar 1: Halaman Depan" /></div>
+                <div class="carousel-slide"><img src="images/LuxBeauty/Picture3.png"
+                    alt="Tangkapan Layar 2: Katalog Produk" /></div>
+                <div class="carousel-slide"><img src="images/LuxBeauty/Picture5.png"
+                    alt="Tangkapan Layar 3: Detail Produk" /></div>
+                <div class="carousel-slide"><img src="images/LuxBeauty/Picture7.png"
+                    alt="Tangkapan Layar 4: Keranjang Belanja" /></div>
+                <div class="carousel-slide"><img src="images/LuxBeauty/Picture13.png"
+                    alt="Tangkapan Layar 5: Halaman Checkout" /></div>
+                <div class="carousel-slide"><img src="images/LuxBeauty/Picture15.png"
+                    alt="Tangkapan Layar 6: Dashboard Admin" /></div>
+                <div class="carousel-slide"><img src="images/LuxBeauty/Picture16.png"
+                    alt="Tangkapan Layar 7: Manajemen Produk" /></div>
+                <div class="carousel-slide"><img src="images/LuxBeauty/Picture17.png"
+                    alt="Tangkapan Layar 8: Daftar Pesanan" /></div>
+                <div class="carousel-slide"><img src="images/LuxBeauty/Picture18.png"
+                    alt="Tangkapan Layar 9: Halaman Login" /></div>
               </div>
               <div class="carousel-dots"></div>
             </div>
@@ -182,45 +209,44 @@
       <div class="lg:col-span-7">
         <div class="border-animated rounded-lg p-px h-full">
           <div class="bg-gray-900/80 rounded-lg p-6 md:p-8 h-full grid grid-rows-[auto_1fr_auto] gap-4">
-
             <h2 class="text-2xl md:text-3xl font-bold text-[var(--primary)]">
-              Project Details
+              Detail Proyek
             </h2>
 
             <div
               class="prose prose-sm sm:prose-base prose-invert max-w-none text-gray-300 space-y-4 overflow-y-auto pr-3 prose-scrollable">
               <p>
-                <strong>LuxBeauty</strong> is an e-commerce website built with the Codeigniter 4 framework. This project
-                was developed as a final assignment for the Interactive Web Programming 2 course.
+                <strong>LuxBeauty</strong> adalah situs web e-commerce yang dibangun menggunakan framework CodeIgniter
+                4. Proyek ini dikembangkan sebagai tugas akhir untuk mata kuliah Pemrograman Web Interaktif 2.
               </p>
 
-              <h3 class="text-lg sm:text-xl font-semibold text-[var(--secondary)] !mt-6 !mb-2">Key Features:</h3>
+              <h3 class="text-lg sm:text-xl font-semibold text-[var(--secondary)] !mt-6 !mb-2">Fitur Utama:</h3>
               <ul class="list-disc list-inside space-y-1 marker:text-[var(--primary)]">
-                <li><strong>Full E-commerce Functionality:</strong> User authentication, product catalog, shopping cart,
-                  and checkout process.</li>
-                <li><strong>Admin Dashboard:</strong> A backend panel for managing products, orders, and users.</li>
-                <li><strong>MVC Architecture:</strong> Built following the Model-View-Controller pattern with
-                  Codeigniter 4.</li>
+                <li><strong>Fungsionalitas E-commerce Lengkap:</strong> Autentikasi pengguna, katalog produk, keranjang
+                  belanja, dan proses checkout.</li>
+                <li><strong>Dasbor Admin:</strong> Panel backend untuk mengelola produk, pesanan, dan pengguna.</li>
+                <li><strong>Arsitektur MVC:</strong> Dibangun mengikuti pola Model-View-Controller dengan CodeIgniter 4.
+                </li>
               </ul>
             </div>
 
             <div>
               <div class="mb-4">
-                <a href="#" target="_blank" rel="noopener noreferrer"
+                <a href="https://github.com/your-username/luxbeauty-project" target="_blank" rel="noopener noreferrer"
                   class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-gray-900 font-bold rounded-lg hover:opacity-90 transition duration-300 shadow-md shadow-[var(--primary)]/20 text-base">
-                  <i class="fas fa-external-link-alt mr-2.5"></i> View Demo
-                  a>
+                  <i class="fab fa-github mr-2.5"></i> Lihat Kode
+                </a>
               </div>
-              <h3 class="text-lg font-semibold text-[var(--secondary)] mb-3">Technologies Used:</h3>
+              <h3 class="text-lg font-semibold text-[var(--secondary)] mb-3">Teknologi yang Digunakan:</h3>
               <div class="flex flex-wrap gap-2">
                 <span class="skill-tag mono">Codeigniter 4</span>
                 <span class="skill-tag mono">PHP</span>
                 <span class="skill-tag mono">MySQL</span>
                 <span class="skill-tag mono">Bootstrap</span>
                 <span class="skill-tag mono">HTML/CSS</span>
+                <span class="skill-tag mono">JavaScript</span>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -230,7 +256,7 @@
   <footer class="py-8 mt-12 border-t" style="border-color: var(--border-color);">
     <div class="container mx-auto px-4">
       <p class="text-gray-400 text-sm mono text-center">
-        Copyright &copy; <span id="current-year-detail">2025</span> by Fahsa Aula | All Rights Reserved.
+        Copyright &copy; <span id="current-year-detail">2025</span> oleh Fahsa Aula | Hak Cipta Dilindungi.
       </p>
     </div>
   </footer>
@@ -238,76 +264,98 @@
   <script src="js/sci-fi.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      // Section fade-in animation
+      // --- Section fade-in animation ---
       const sections = document.querySelectorAll(".section-detail-hidden");
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-              setTimeout(() => {
-                entry.target.classList.add("section-detail-visible");
-              }, i * 150);
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-      sections.forEach((section) => observer.observe(section));
-
-      // Carousel Logic
-      const track = document.querySelector(".carousel-track");
-      if (track) {
-        const slides = Array.from(track.children);
-        if (slides.length > 0) {
-          const dotsNav = document.querySelector(".carousel-dots");
-          let slideWidth = slides[0].getBoundingClientRect().width;
-          let currentIndex = 0;
-          let autoPlayInterval;
-          const moveToSlide = (targetIndex) => {
-            const newIndex = (targetIndex + slides.length) % slides.length;
-            track.style.transform = `translateX(-${slideWidth * newIndex}px)`;
-            currentIndex = newIndex;
-            updateDots();
-          };
-          const updateDots = () => {
-            if (!dotsNav) return;
-            Array.from(dotsNav.children).forEach((dot, index) => dot.classList.toggle("active", index === currentIndex));
-          };
-          const createDots = () => {
-            if (!dotsNav) return;
-            dotsNav.innerHTML = '';
-            slides.forEach((_, index) => {
-              const button = document.createElement("button");
-              button.classList.add("carousel-dot");
-              if (index === 0) button.classList.add("active");
-              button.addEventListener("click", () => { moveToSlide(index); resetAutoPlay(); });
-              dotsNav.appendChild(button);
+      if (sections.length > 0) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry, i) => {
+              if (entry.isIntersecting) {
+                setTimeout(() => {
+                  entry.target.classList.add("section-detail-visible");
+                }, i * 150);
+                observer.unobserve(entry.target);
+              }
             });
-          };
-          const startAutoPlay = (interval = 4000) => {
-            stopAutoPlay();
-            if (slides.length > 1) autoPlayInterval = setInterval(() => moveToSlide(currentIndex + 1), interval);
-          };
-          const stopAutoPlay = () => clearInterval(autoPlayInterval);
-          const resetAutoPlay = () => { stopAutoPlay(); startAutoPlay(); };
-          const setupCarousel = () => {
-            slideWidth = slides[0].getBoundingClientRect().width;
-            createDots();
-            moveToSlide(currentIndex);
-            startAutoPlay();
-          };
-          setupCarousel();
-          window.addEventListener('resize', () => {
-            slideWidth = slides[0].getBoundingClientRect().width;
-            track.style.transition = 'none';
-            moveToSlide(currentIndex);
-            setTimeout(() => track.style.transition = 'transform 0.5s ease-in-out', 50);
-          });
+          }, { threshold: 0.1 }
+        );
+        sections.forEach((section) => observer.observe(section));
+      }
+
+      // --- Carousel Logic (Dibuat lebih robust) ---
+      const carouselContainer = document.querySelector(".carousel-container");
+      if (carouselContainer) {
+        const track = carouselContainer.querySelector(".carousel-track");
+        const dotsNav = carouselContainer.querySelector(".carousel-dots");
+
+        if (track && dotsNav) {
+          const slides = Array.from(track.children);
+
+          if (slides.length > 0) {
+            let slideWidth = slides[0].getBoundingClientRect().width;
+            let currentIndex = 0;
+            let autoPlayInterval;
+
+            const moveToSlide = (targetIndex) => {
+              const newIndex = (targetIndex + slides.length) % slides.length;
+              track.style.transform = `translateX(-${slideWidth * newIndex}px)`;
+              currentIndex = newIndex;
+              updateDots();
+            };
+
+            const updateDots = () => {
+              const dots = Array.from(dotsNav.children);
+              dots.forEach((dot, index) => dot.classList.toggle("active", index === currentIndex));
+            };
+
+            const createDots = () => {
+              dotsNav.innerHTML = '';
+              slides.forEach((_, index) => {
+                const button = document.createElement("button");
+                button.setAttribute("aria-label", `Go to slide ${index + 1}`);
+                button.classList.add("carousel-dot");
+                if (index === 0) button.classList.add("active");
+                button.addEventListener("click", () => {
+                  moveToSlide(index);
+                  resetAutoPlay();
+                });
+                dotsNav.appendChild(button);
+              });
+            };
+
+            const startAutoPlay = (interval = 4000) => {
+              stopAutoPlay();
+              if (slides.length > 1) {
+                autoPlayInterval = setInterval(() => moveToSlide(currentIndex + 1), interval);
+              }
+            };
+
+            const stopAutoPlay = () => clearInterval(autoPlayInterval);
+            const resetAutoPlay = () => { stopAutoPlay(); startAutoPlay(); };
+
+            const setupCarousel = () => {
+              createDots();
+              moveToSlide(currentIndex);
+              startAutoPlay();
+            };
+
+            const handleResize = () => {
+              slideWidth = slides[0].getBoundingClientRect().width;
+              track.style.transition = 'none'; // Disable transisi saat resize
+              moveToSlide(currentIndex);
+              // Paksa reflow agar transisi kembali aktif setelahnya
+              setTimeout(() => {
+                track.style.transition = 'transform 0.5s ease-in-out';
+              }, 50);
+            }
+
+            setupCarousel();
+            window.addEventListener('resize', handleResize);
+          }
         }
       }
 
-      // Update Year in Footer
+      // --- Update Year in Footer ---
       const yearSpanDetail = document.getElementById("current-year-detail");
       if (yearSpanDetail) {
         yearSpanDetail.textContent = new Date().getFullYear().toString();
