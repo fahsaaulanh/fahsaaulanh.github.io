@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const pageInfoSpan = document.getElementById("page-info");
   const prevPageBtn = document.getElementById("prev-page-btn");
   const nextPageBtn = document.getElementById("next-page-btn");
-  const itemsPerPageProjects = 3;
+  const itemsPerPageProjects = 6;
   let currentPageProjects = 1;
 
   function getProjectCardHTML(project) {
@@ -414,11 +414,11 @@ document.addEventListener("DOMContentLoaded", () => {
         ""
       )}</div><div class="flex justify-between items-center mt-auto"><a href="${
       project.liveLink
-    }" target="_blank" rel="noopener noreferrer" class="${
+    }" rel="noopener noreferrer" class="${
       theme.text
     } hover:opacity-80 transition-opacity duration-300 flex items-center text-sm font-medium"><span>View Project</span><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a><a href="${
       project.repoLink
-    }" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-300 transition-colors duration-300"><i class="fab fa-github text-xl"></i></a></div></div></div></div>`;
+    }" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-300 transition-colors duration-300"><i class="fab fa-github text-xl"></i></a></div></div></div></div>`;
   }
 
   function displayProjects() {

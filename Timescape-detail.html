@@ -9,137 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="css/color.css" />
   <link rel="stylesheet" href="css/sci-fi.css" />
+  <link rel="stylesheet" href="css/project-detail.css" />
 
-  <style>
-    body {
-      font-family: "Rajdhani", sans-serif;
-      background-color: var(--dark);
-      color: var(--light);
-    }
-
-    #interactive-bg-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: "Orbitron", sans-serif;
-    }
-
-    .mono {
-      font-family: "Share Tech Mono", monospace;
-    }
-
-    .glow {
-      text-shadow: 0 0 8px var(--primary), 0 0 15px var(--primary), 0 0 25px var(--primary);
-    }
-
-    /* Responsive Iframe Container untuk video (16:9) */
-    .iframe-container {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      /* 16:9 Aspect Ratio */
-      height: 0;
-      overflow: hidden;
-      border-radius: 0.5rem;
-    }
-
-    .iframe-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    /* Carousel Styling */
-    .carousel-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: 0.5rem;
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .carousel-slide {
-      min-width: 100%;
-      box-sizing: border-box;
-    }
-
-    .carousel-slide img {
-      width: 100%;
-      height: auto;
-      max-height: 450px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .carousel-dots {
-      position: absolute;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 8px;
-    }
-
-    .carousel-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: rgba(226, 232, 240, 0.5);
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .carousel-dot.active {
-      background-color: var(--primary);
-    }
-
-    /* Fade-in Animation */
-    .section-detail-hidden {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    .section-detail-visible {
-      opacity: 1;
-      transform: translateY(0px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    /* Custom scrollbar styling */
-    .prose-scrollable::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    .prose-scrollable::-webkit-scrollbar-track {
-      background: rgba(17, 24, 39, 0.5);
-      border-radius: 10px;
-    }
-
-    .prose-scrollable::-webkit-scrollbar-thumb {
-      background: var(--primary);
-      border-radius: 10px;
-      border: 2px solid transparent;
-      background-clip: content-box;
-    }
-
-    .prose-scrollable::-webkit-scrollbar-thumb:hover {
-      background: var(--secondary);
-    }
-  </style>
 </head>
 
 <body class="antialiased">
@@ -150,7 +21,7 @@
       class="border-animated group relative inline-flex items-center justify-center px-4 py-2 text-sm font-bold text-[var(--primary)] transition-colors duration-300 rounded-md bg-gray-900/80 backdrop-blur-sm mono hover:text-white hover:shadow-lg hover:shadow-[var(--primary)]/20"
       style="border-color: var(--border-color);">
       <i class="fas fa-chevron-left mr-2 transform group-hover:-translate-x-1 transition-transform duration-300"></i>
-      Back to Portfolio
+      Back to Home
     </a>
   </div>
 
@@ -159,10 +30,11 @@
       <div class="max-w-4xl mx-auto">
         <p class="text-base sm:text-lg text-gray-400 mono mb-2">[3D Multiplayer Puzzle-Platformer]</p>
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-[var(--primary)]">
-          Timescape <span class="glow">2</span>
+          Timescape <span class="text-[var(--secondary)] secondary-glow">2</span>
         </h1>
       </div>
     </header>
+
 
     <section class="mb-10 md:mb-16 section-detail-hidden max-w-7xl mx-auto">
       <div class="border-animated rounded-lg p-px">
@@ -177,72 +49,77 @@
       </div>
     </section>
 
-
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 section-detail-hidden">
-      <div class="lg:col-span-5">
-        <div class="border-animated rounded-lg p-px h-full">
-          <div class="bg-gray-900/80 rounded-lg p-4 h-full flex flex-col">
-            <h3 class="text-xl font-semibold mb-4 text-[var(--secondary)]">
-              In-Game Screenshots
-            </h3>
-            <div class="carousel-container flex-grow">
-              <div class="carousel-track">
-                <div class="carousel-slide"><img src="images/Timescape/01.png" alt="Timescape Screenshot 1" /></div>
-                <div class="carousel-slide"><img src="images/Timescape/02.png" alt="Timescape Screenshot 2" /></div>
-                <div class="carousel-slide"><img src="images/Timescape/03.png" alt="Timescape Screenshot 3" /></div>
-                <div class="carousel-slide"><img src="images/Timescape/04.png" alt="Timescape Screenshot 4" /></div>
-              </div>
-              <div class="carousel-dots"></div>
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:h-[600px]">
+      <!-- Project Preview -->
+      <div class="border-animated rounded-lg p-px h-full flex flex-col">
+        <div class="bg-gray-900/80 rounded-lg p-4 flex flex-col h-full">
+          <h3 class="text-xl font-semibold mb-4 text-[var(--secondary)]">Project Previews</h3>
+          <div class="carousel-container mb-6">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/Timescape/01.png" alt="Timescape Screenshot 1" /></div>
+              <div class="carousel-slide"><img src="images/Timescape/02.png" alt="Timescape Screenshot 2" /></div>
+              <div class="carousel-slide"><img src="images/Timescape/03.png" alt="Timescape Screenshot 3" /></div>
+              <div class="carousel-slide"><img src="images/Timescape/04.png" alt="Timescape Screenshot 4" /></div>
             </div>
+            <div class="carousel-dots"></div>
+          </div>
+          <div class="mt-auto space-y-3 pt-4">
+            <a href="https://fahsaaula.itch.io/timescape-fusion-devs" rel="noopener noreferrer"
+              class="flex items-center justify-center w-full px-5 py-2.5 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-gray-900 font-bold rounded-lg hover:opacity-90 transition duration-300 shadow-md shadow-[var(--primary)]/20 text-sm sm:text-base">
+              <i class="fas fa-gamepad mr-2.5"></i> Play On Itch Io
+            </a>
+            <a href="https://fahsaaula.itch.io/timescape-fusion-devs" rel="noopener noreferrer"
+              class="flex items-center justify-center w-full px-5 py-2.5 bg-transparent border-2 border-[var(--primary)] text-[var(--primary)] font-semibold rounded-lg hover:bg-[var(--primary)] hover:text-gray-900 transition duration-300 text-sm sm:text-base">
+              <i class="fab fa-github mr-2.5"></i> Source Code
+            </a>
           </div>
         </div>
       </div>
 
-      <div class="lg:col-span-7">
-        <div class="border-animated rounded-lg p-px h-full">
-          <div class="bg-gray-900/80 rounded-lg p-6 md:p-8 h-full grid grid-rows-[auto_1fr_auto] gap-4">
+      <!-- Project Overview -->
+      <div class="border-animated rounded-lg p-px h-full flex flex-col">
+        <div class="bg-gray-900/80 rounded-lg p-6 md:p-8 flex flex-col h-full">
+          <h2 class="text-2xl md:text-3xl font-bold text-[var(--primary)] mb-2">Project Overview</h2>
+          <div
+            class="prose prose-sm sm:prose-base prose-invert max-w-none text-gray-300 space-y-4 overflow-y-auto pr-3 prose-scrollable flex-1 min-h-0">
+            <p>
+              <strong>TIMESCAPE 2</strong> is a 3D multiplayer puzzle-platformer game for two players that tests
+              collaboration, teamwork, and problem-solving skills. Players face obstacles and solve puzzles using the
+              ability to move through time.
+            </p>
 
-            <h2 class="text-2xl md:text-3xl font-bold text-[var(--primary)]">
-              Game Overview
-            </h2>
+            <h3 class="text-lg sm:text-xl font-semibold text-[var(--secondary)] !mt-6 !mb-2">Core Mechanic: Time
+              Switching</h3>
+            <p>
+              With the unique time-switching mechanic, players can instantly move between the past and the future,
+              separated by one century. This allows them to find required items, alter map conditions, and solve
+              complex puzzles at each level by manipulating the environment across different timelines.
+            </p>
+            <h3 class="text-lg sm:text-xl font-semibold text-[var(--secondary)] !mt-6 !mb-2">Key Features:</h3>
+            <ul class="list-disc list-inside space-y-1 marker:text-[var(--primary)]">
+              <li><strong>Online Leaderboard:</strong> Displays the top 100 high scores and player names globally.</li>
+              <li><strong>User Authentication:</strong> Secure login and data storage powered by PlayFab services.</li>
+              <li><strong>Character Selection:</strong> Players can choose from multiple playable characters.</li>
+              <li><strong>Versatile Controls:</strong> Supports both keyboard and joystick input for flexible gameplay.
+              </li>
+              <li><strong>Progressive Levels:</strong> Each stage introduces new math mechanics and increasing
+                challenges.</li>
+            </ul>
+          </div>
 
-            <div
-              class="prose prose-sm sm:prose-base prose-invert max-w-none text-gray-300 space-y-4 overflow-y-auto pr-3 prose-scrollable">
-              <p>
-                <strong>TIMESCAPE 2</strong> is a 3D multiplayer puzzle-platformer game for two players that tests
-                collaboration, teamwork, and problem-solving skills. Players face obstacles and solve puzzles using the
-                ability to move through time.
-              </p>
-
-              <h3 class="text-lg sm:text-xl font-semibold text-[var(--secondary)] !mt-6 !mb-2">Core Mechanic: Time
-                Switching</h3>
-              <p>
-                With the unique time-switching mechanic, players can instantly move between the past and the future,
-                separated by one century. This allows them to find required items, alter map conditions, and solve
-                complex puzzles at each level by manipulating the environment across different timelines.
-              </p>
+          <div class="mt-4">
+            <h3 class="text-lg font-semibold text-[var(--secondary)] mb-3">Technologies Used:</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag mono">Unity</span>
+              <span class="skill-tag mono">C#</span>
+              <span class="skill-tag mono">Photon</span>
+              <span class="skill-tag mono">Multiplayer</span>
             </div>
-
-            <div>
-              <div class="mb-4">
-                <a href="https://fahsaaula.itch.io/timescape-fusion-devs" target="_blank" rel="noopener noreferrer"
-                  class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-gray-900 font-bold rounded-lg hover:opacity-90 transition duration-300 shadow-md shadow-[var(--primary)]/20 text-base">
-                  <i class="fas fa-gamepad mr-2.5"></i> Play on Itch.io
-                </a>
-              </div>
-              <h3 class="text-lg font-semibold text-[var(--secondary)] mb-3">Technologies Used:</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="skill-tag mono">Unity</span>
-                <span class="skill-tag mono">C#</span>
-                <span class="skill-tag mono">Photon</span>
-                <span class="skill-tag mono">Multiplayer</span>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="py-8 mt-12 border-t" style="border-color: var(--border-color);">
@@ -254,82 +131,8 @@
   </footer>
 
   <script src="js/sci-fi.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Section fade-in animation
-      const sections = document.querySelectorAll(".section-detail-hidden");
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-              setTimeout(() => {
-                entry.target.classList.add("section-detail-visible");
-              }, i * 150);
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-      sections.forEach((section) => observer.observe(section));
+  <script src="js/project-detail.js"></script>
 
-      // Carousel Logic
-      const track = document.querySelector(".carousel-track");
-      if (track) {
-        const slides = Array.from(track.children);
-        if (slides.length > 0) {
-          const dotsNav = document.querySelector(".carousel-dots");
-          let slideWidth = slides[0].getBoundingClientRect().width;
-          let currentIndex = 0;
-          let autoPlayInterval;
-          const moveToSlide = (targetIndex) => {
-            const newIndex = (targetIndex + slides.length) % slides.length;
-            track.style.transform = `translateX(-${slideWidth * newIndex}px)`;
-            currentIndex = newIndex;
-            updateDots();
-          };
-          const updateDots = () => {
-            if (!dotsNav) return;
-            Array.from(dotsNav.children).forEach((dot, index) => dot.classList.toggle("active", index === currentIndex));
-          };
-          const createDots = () => {
-            if (!dotsNav) return;
-            dotsNav.innerHTML = '';
-            slides.forEach((_, index) => {
-              const button = document.createElement("button");
-              button.classList.add("carousel-dot");
-              if (index === 0) button.classList.add("active");
-              button.addEventListener("click", () => { moveToSlide(index); resetAutoPlay(); });
-              dotsNav.appendChild(button);
-            });
-          };
-          const startAutoPlay = (interval = 4000) => {
-            stopAutoPlay();
-            if (slides.length > 1) autoPlayInterval = setInterval(() => moveToSlide(currentIndex + 1), interval);
-          };
-          const stopAutoPlay = () => clearInterval(autoPlayInterval);
-          const resetAutoPlay = () => { stopAutoPlay(); startAutoPlay(); };
-          const setupCarousel = () => {
-            slideWidth = slides[0].getBoundingClientRect().width;
-            createDots();
-            moveToSlide(currentIndex);
-            startAutoPlay();
-          };
-          setupCarousel();
-          window.addEventListener('resize', () => {
-            slideWidth = slides[0].getBoundingClientRect().width;
-            track.style.transition = 'none';
-            moveToSlide(currentIndex);
-            setTimeout(() => track.style.transition = 'transform 0.5s ease-in-out', 50);
-          });
-        }
-      }
-
-      // Update Year in Footer
-      const yearSpanDetail = document.getElementById("current-year-detail");
-      if (yearSpanDetail) yearSpanDetail.textContent = new Date().getFullYear().toString();
-    });
-  </script>
 </body>
 
 </html>

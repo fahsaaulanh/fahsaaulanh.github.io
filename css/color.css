@@ -1,8 +1,8 @@
 :root {
-        --primary: #82a2f9; /* Cyan */
-        --secondary: #7928ca; /* Purple */
-        --dark: #0a0a1b;
-        --light: #e2e8f0;
-        --accent: #ff2d55;
-        --border-color: rgba(0, 247, 255, 0.25);
-      }
+  --primary: #82a2f9; /* Cyan */
+  --secondary: #bc83f5; /* Purple */
+  --dark: #0a0a1b;
+  --light: #e2e8f0;
+  --accent: #ff2d55;
+  --border-color: rgba(0, 247, 255, 0.25);
+}

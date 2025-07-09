@@ -19,126 +19,8 @@
 
   <link rel="stylesheet" href="css/color.css" />
   <link rel="stylesheet" href="css/sci-fi.css" />
+  <link rel="stylesheet" href="css/project-detail.css" />
 
-  <style>
-    :root {
-      /* Placeholder: Pastikan variabel ini didefinisikan di css/color.css */
-      --dark: #0f172a;
-      --light: #e2e8f0;
-      --primary: #38bdf8;
-      --secondary: #818cf8;
-      --border-color: rgba(59, 130, 246, 0.2);
-    }
-
-    body {
-      font-family: "Rajdhani", sans-serif;
-      background-color: var(--dark);
-      color: var(--light);
-    }
-
-    #interactive-bg-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: "Orbitron", sans-serif;
-    }
-
-    .mono {
-      font-family: "Share Tech Mono", monospace;
-    }
-
-    .glow {
-      text-shadow: 0 0 8px var(--primary), 0 0 15px var(--primary), 0 0 25px var(--primary);
-    }
-
-    /* Carousel Styling */
-    .carousel-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: 0.5rem;
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .carousel-slide {
-      min-width: 100%;
-      box-sizing: border-box;
-    }
-
-    .carousel-slide img {
-      width: 100%;
-      height: auto;
-      max-height: 450px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .carousel-dots {
-      position: absolute;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 8px;
-    }
-
-    .carousel-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: rgba(226, 232, 240, 0.5);
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .carousel-dot.active {
-      background-color: var(--primary);
-    }
-
-    /* Fade-in Animation */
-    .section-detail-hidden {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    .section-detail-visible {
-      opacity: 1;
-      transform: translateY(0px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    /* Custom scrollbar styling */
-    .prose-scrollable::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    .prose-scrollable::-webkit-scrollbar-track {
-      background: rgba(17, 24, 39, 0.5);
-      border-radius: 10px;
-    }
-
-    .prose-scrollable::-webkit-scrollbar-thumb {
-      background: var(--primary);
-      border-radius: 10px;
-      border: 2px solid transparent;
-      background-clip: content-box;
-    }
-
-    .prose-scrollable::-webkit-scrollbar-thumb:hover {
-      background: var(--secondary);
-    }
-  </style>
 </head>
 
 <body class="antialiased">
@@ -149,7 +31,7 @@
       class="border-animated group relative inline-flex items-center justify-center px-4 py-2 text-sm font-bold text-[var(--primary)] transition-colors duration-300 rounded-md bg-gray-900/80 backdrop-blur-sm mono hover:text-white hover:shadow-lg hover:shadow-[var(--primary)]/20"
       style="border-color: var(--border-color);">
       <i class="fas fa-chevron-left mr-2 transform group-hover:-translate-x-1 transition-transform duration-300"></i>
-      Kembali ke Portofolio
+      Back To Home
     </a>
   </div>
 
@@ -256,112 +138,14 @@
   <footer class="py-8 mt-12 border-t" style="border-color: var(--border-color);">
     <div class="container mx-auto px-4">
       <p class="text-gray-400 text-sm mono text-center">
-        Copyright &copy; <span id="current-year-detail">2025</span> oleh Fahsa Aula | Hak Cipta Dilindungi.
+        Copyright &copy; <span id="current-year-detail">2025</span> by Fahsa Aula | Hak Cipta Dilindungi.
       </p>
     </div>
   </footer>
 
   <script src="js/sci-fi.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // --- Section fade-in animation ---
-      const sections = document.querySelectorAll(".section-detail-hidden");
-      if (sections.length > 0) {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry, i) => {
-              if (entry.isIntersecting) {
-                setTimeout(() => {
-                  entry.target.classList.add("section-detail-visible");
-                }, i * 150);
-                observer.unobserve(entry.target);
-              }
-            });
-          }, { threshold: 0.1 }
-        );
-        sections.forEach((section) => observer.observe(section));
-      }
+  <script src="js/project-detail.js"></script>
 
-      // --- Carousel Logic (Dibuat lebih robust) ---
-      const carouselContainer = document.querySelector(".carousel-container");
-      if (carouselContainer) {
-        const track = carouselContainer.querySelector(".carousel-track");
-        const dotsNav = carouselContainer.querySelector(".carousel-dots");
-
-        if (track && dotsNav) {
-          const slides = Array.from(track.children);
-
-          if (slides.length > 0) {
-            let slideWidth = slides[0].getBoundingClientRect().width;
-            let currentIndex = 0;
-            let autoPlayInterval;
-
-            const moveToSlide = (targetIndex) => {
-              const newIndex = (targetIndex + slides.length) % slides.length;
-              track.style.transform = `translateX(-${slideWidth * newIndex}px)`;
-              currentIndex = newIndex;
-              updateDots();
-            };
-
-            const updateDots = () => {
-              const dots = Array.from(dotsNav.children);
-              dots.forEach((dot, index) => dot.classList.toggle("active", index === currentIndex));
-            };
-
-            const createDots = () => {
-              dotsNav.innerHTML = '';
-              slides.forEach((_, index) => {
-                const button = document.createElement("button");
-                button.setAttribute("aria-label", `Go to slide ${index + 1}`);
-                button.classList.add("carousel-dot");
-                if (index === 0) button.classList.add("active");
-                button.addEventListener("click", () => {
-                  moveToSlide(index);
-                  resetAutoPlay();
-                });
-                dotsNav.appendChild(button);
-              });
-            };
-
-            const startAutoPlay = (interval = 4000) => {
-              stopAutoPlay();
-              if (slides.length > 1) {
-                autoPlayInterval = setInterval(() => moveToSlide(currentIndex + 1), interval);
-              }
-            };
-
-            const stopAutoPlay = () => clearInterval(autoPlayInterval);
-            const resetAutoPlay = () => { stopAutoPlay(); startAutoPlay(); };
-
-            const setupCarousel = () => {
-              createDots();
-              moveToSlide(currentIndex);
-              startAutoPlay();
-            };
-
-            const handleResize = () => {
-              slideWidth = slides[0].getBoundingClientRect().width;
-              track.style.transition = 'none'; // Disable transisi saat resize
-              moveToSlide(currentIndex);
-              // Paksa reflow agar transisi kembali aktif setelahnya
-              setTimeout(() => {
-                track.style.transition = 'transform 0.5s ease-in-out';
-              }, 50);
-            }
-
-            setupCarousel();
-            window.addEventListener('resize', handleResize);
-          }
-        }
-      }
-
-      // --- Update Year in Footer ---
-      const yearSpanDetail = document.getElementById("current-year-detail");
-      if (yearSpanDetail) {
-        yearSpanDetail.textContent = new Date().getFullYear().toString();
-      }
-    });
-  </script>
 </body>
 
 </html>

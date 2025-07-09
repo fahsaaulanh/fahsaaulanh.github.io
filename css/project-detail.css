@@ -1,0 +1,120 @@
+body {
+  font-family: "Rajdhani", sans-serif;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+#interactive-bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Orbitron", sans-serif;
+}
+
+.mono {
+  font-family: "Share Tech Mono", monospace;
+}
+
+.primary-glow {
+  text-shadow: 0 0 8px var(--primary), 0 0 15px var(--primary),
+    0 0 25px var(--primary);
+}
+
+.secondary-glow {
+  text-shadow: 0 0 8px var(--secondary), 0 0 15px var(--secondary),
+    0 0 25px var(--secondary);
+}
+
+/* Responsive Iframe Container untuk video (16:9) */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  display: block;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(226, 232, 240, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+  background-color: var(--primary);
+}
+
+.prose-scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+
+.prose-scrollable::-webkit-scrollbar-track {
+  background: rgba(17, 24, 39, 0.5);
+  border-radius: 10px;
+}
+
+.prose-scrollable::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.prose-scrollable::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
