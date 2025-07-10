@@ -9,137 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="css/color.css" />
   <link rel="stylesheet" href="css/sci-fi.css" />
+  <link rel="stylesheet" href="css/project-detail.css" />
 
-  <style>
-    body {
-      font-family: "Rajdhani", sans-serif;
-      background-color: var(--dark);
-      color: var(--light);
-    }
-
-    #interactive-bg-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: "Orbitron", sans-serif;
-    }
-
-    .mono {
-      font-family: "Share Tech Mono", monospace;
-    }
-
-    .glow {
-      text-shadow: 0 0 8px var(--primary), 0 0 15px var(--primary), 0 0 25px var(--primary);
-    }
-
-    /* Responsive Iframe Container untuk video (16:9) */
-    .iframe-container {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      /* 16:9 Aspect Ratio */
-      height: 0;
-      overflow: hidden;
-      border-radius: 0.5rem;
-    }
-
-    .iframe-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    /* Carousel Styling */
-    .carousel-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: 0.5rem;
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .carousel-slide {
-      min-width: 100%;
-      box-sizing: border-box;
-    }
-
-    .carousel-slide img {
-      width: 100%;
-      height: auto;
-      max-height: 450px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .carousel-dots {
-      position: absolute;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 8px;
-    }
-
-    .carousel-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: rgba(226, 232, 240, 0.5);
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .carousel-dot.active {
-      background-color: var(--primary);
-    }
-
-    /* Fade-in Animation */
-    .section-detail-hidden {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    .section-detail-visible {
-      opacity: 1;
-      transform: translateY(0px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    /* Custom scrollbar styling */
-    .prose-scrollable::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    .prose-scrollable::-webkit-scrollbar-track {
-      background: rgba(17, 24, 39, 0.5);
-      border-radius: 10px;
-    }
-
-    .prose-scrollable::-webkit-scrollbar-thumb {
-      background: var(--primary);
-      border-radius: 10px;
-      border: 2px solid transparent;
-      background-clip: content-box;
-    }
-
-    .prose-scrollable::-webkit-scrollbar-thumb:hover {
-      background: var(--secondary);
-    }
-  </style>
 </head>
 
 <body class="antialiased">
@@ -159,12 +30,12 @@
       <div class="max-w-4xl mx-auto">
         <p class="text-base sm:text-lg text-gray-400 mono mb-2">[English Learning Based Interactive App]</p>
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-[var(--primary)] glow">
-          Lingo Song
+          Lingo <span class="text-[var(--secondary)] secondary-glow">Song</span>
         </h1>
       </div>
     </header>
 
-    <section class="mb-10 md:mb-16 section-detail-hidden max-w-7xl mx-auto">
+    <section class="hidden lg:block mb-10 md:mb-16 section-detail-hidden max-w-7xl mx-auto">
       <div class="border-animated rounded-lg p-px">
         <div class="iframe-container bg-gray-900/80 shadow-2xl shadow-[var(--primary)]/10">
           <iframe src="https://www.youtube.com/embed/BJr3y67mG5Y?si=-7Am8JJFuad1Odtj" title="YouTube video player"

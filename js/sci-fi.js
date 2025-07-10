@@ -249,13 +249,13 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 1,
       title: "Lingo Song APP",
       category: "Mobile App",
-      image: "images/LingoSong/lingosong_004.png",
+      image: "images/LingoSong/Thumbnail.jpg",
       description:
         "English learning app leveraging VAK pedagogy through music-driven activities.",
       tags: ["Unity", "C#", "Firebase", "Playfab"],
       liveLink: "Lingosong.html", // Pastikan Anda memiliki halaman ini
       repoLink: "#",
-      themeColor: "purple",
+      themeColor: "red",
     },
     {
       id: 2,
@@ -263,11 +263,22 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Game Project",
       image: "images/Timescape/01.png",
       description:
-        "A 3D multiplayer puzzle-platformer where players manipulate time to solve collaborative puzzles.",
+        "A 3D multiplayer puzzle-platformer game where players manipulate time to solve collaborative puzzles.",
       tags: ["Unity", "C#", "Photon", "Multiplayer"],
       liveLink: "Timescape-detail.html", // Path ke halaman detail
       repoLink: "https://github.com/your-username/timescape2", // Ganti dengan link repo Anda
       themeColor: "purple",
+    },
+    {
+      id: 20,
+      title: "Robolab",
+      category: "Interactive AR Book & App",
+      image: "images/Robolab/Thumbnail.jpg",
+      description: "Interactive AR App for Learning Physics",
+      tags: ["Unity", "C#", "AR Tech", "Vuforia", "Game Design"],
+      liveLink: "robolab.html", // Pastikan Anda memiliki halaman ini
+      repoLink: "#",
+      themeColor: "pink",
     },
     {
       id: 3,
@@ -297,7 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 5,
       title: "Wingy",
       category: "Online Multiplayer Game",
-      image: "images/wingy/4.png",
+      image: "images/wingy/1.png",
       description:
         "A feature-rich online multiplayer game with ranked modes, leaderboards, and an in-game shop.",
       tags: ["Unity", "C#", "Photon", "PlayFab"],
