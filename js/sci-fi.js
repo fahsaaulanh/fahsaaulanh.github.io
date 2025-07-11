@@ -308,7 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 5,
       title: "Wingy",
       category: "Online Multiplayer Game",
-      image: "images/wingy/1.png",
+      image: "images/wingy/Thumbnail.jpg",
       description:
         "A feature-rich online multiplayer game with ranked modes, leaderboards, and an in-game shop.",
       tags: ["Unity", "C#", "Photon", "PlayFab"],
