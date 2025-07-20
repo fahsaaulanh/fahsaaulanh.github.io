@@ -332,7 +332,7 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 7,
       title: "Hilton In Tropical",
       category: "Adventure Game",
-      image: "images/Hilton/4.png",
+      image: "images/Hilton/Thumbnail.jpg",
       description:
         "The second installment in the Hilton adventure series, set in a lush tropical forest with new mini-games.",
       tags: ["Unity", "C#", "2D Platformer"],
